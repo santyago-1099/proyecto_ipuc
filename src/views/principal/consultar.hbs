@@ -1,0 +1,45 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card-body">
+                 <h2 class="card-title"><center>USUARIOS</center></h2><br>
+                <table class="table responsive-md">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">usuario</th>
+                            <th scope="col">contraseña</th>
+                            <th scope="col">#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each usuario}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{usuario}}</td>
+                            <td>{{contra}}</td>
+                            <td>
+                                <a href="/principal/delete/{{id}}" class="btn btn-success btn-info">Eliminar</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"> volver a opciones</h5>
+                            <a href="/opciones/opciones" class="btn btn-success btn-info btn-lg">Ir Aqui...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Registrar</h5>
+                            <a href="/principal/add" class="btn btn-success btn-info btn-lg">Ir Aqui...</a>
+                        </div>
+                    </div>
+                </div>

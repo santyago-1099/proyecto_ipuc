@@ -1,0 +1,55 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-16 mx-auto">
+            <div class="card-body">
+               <h2 class="card-title"><center>REGISTRO PRO-COVID 19</center></h2><br>
+                <table class="table responsive-md">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">nombres</th>
+                            <th scope="col">apellidos</th>
+                            <th scope="col">cedula</th>
+                            <th scope="col">telefono</th>
+                            <th scope="col">sintomas</th>
+                            <th scope="col">fecha</th>
+                            <th scope="col">temperatura</th>
+                            <th scope="col">#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each covid}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{nombres}}</td>
+                            <td>{{apellidos}}</td>
+                            <td>{{cedula}}</td>
+                            <td>{{telefono}}</td>
+                            <td>{{sintomas}}</td>
+                            <td>{{fecha}}</td>
+                            <td>{{temperatura}}</td>
+                            <td>
+                                <a href="/covid/delete/{{id}}" class="btn btn-success btn-info btn-lg">Eliminar</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"> volver a opciones</h5>
+                            <a href="/opciones/opciones" class="btn btn-success btn-info btn-lg">Ir Aqui...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Regitsro Pro-covid 19</h5>
+                            <a href="/covid/add" class="btn btn-success btn-info btn-lg">Ir Aqui...</a>
+                        </div>
+                    </div>
+                </div>

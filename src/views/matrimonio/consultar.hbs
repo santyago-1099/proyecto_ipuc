@@ -1,0 +1,75 @@
+<div class="container p-8">
+    <div class="row">
+        <div class="col-md-16 mx-auto">
+            <div class="card-body">
+                  <h2 class="card-title"><center>REGISTRO DE MATRIMONIO</center></h2><br>
+               <table class="table responsive">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">fecha de inscripcion</th>
+                            <th scope="col">congregacion</th>
+                            <th scope="col">folio</th>
+                            <th scope="col">escritura</th>
+                            <th scope="col">fecha de esccritura</th>
+                            <th scope="col">lugar</th>
+                            <th scope="col">nombre del esposo</th>
+                            <th scope="col">cedula</th>
+                            <th scope="col">nombre de la esposa</th>
+                            <th scope="col">cedula</th>
+                            <th scope="col">telefono</th>
+                            <th scope="col">celular</th>
+                            <th scope="col">direccion</th>
+                            <th scope="col">testigo 1</th>
+                            <th scope="col">cedula</th>
+                            <th scope="col">testigo 2</th>
+                            <th scope="col">cedula</th>
+                            <th scope="col">#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each matrimonio}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{fechaInscripcion}}</td>
+                            <td>{{congregacion}}</td>
+                            <td>{{folio}}</td>
+                            <td>{{escritura}}</td>
+                            <td>{{fechaEscritura}}</td>
+                            <td>{{lugar}}</td>
+                            <td>{{nombreEsposo}}</td>
+                            <td>{{cedulaEsposo}}</td>
+                            <td>{{nombreEsposa}}</td>
+                            <td>{{cedulaEsposa}}</td>
+                            <td>{{telefono1}}</td>
+                            <td>{{celular}}</td>
+                            <td>{{direccion}}</td>
+                            <td>{{testigo1}}</td>
+                            <td>{{cedulaTestigo1}}</td>
+                            <td>{{testigo2}}</td>
+                            <td>{{cedulaTestigo2}}</td>
+                            <td>
+                                <a href="/matrimonio/delete/{{id}}" class="btn btn-success btn-info btn-lg">Eliminar</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"> volver a opciones</h5>
+                            <a href="/opciones/opciones" class="btn btn-success btn-info btn-lg">Ir Aqui...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Registrar</h5>
+                            <a href="/matrimonio/add" class="btn btn-success btn-info btn-lg">Ir Aqui...</a>
+                        </div>
+                    </div>
+                </div>

@@ -1,0 +1,32 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card-body">
+                <h1><center>Usuarios</center></h1>
+                <table class="table responsive-md">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">usuario</th>
+                            <th scope="col">contraseña</th>
+                            <th scope="col">#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each usuario}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{usuario}}</td>
+                            <td>{{contra}}</td>
+                            <td>
+                                <a href="/principal/delete/{{id}}" class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                       {{/each}}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

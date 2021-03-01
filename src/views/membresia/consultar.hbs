@@ -1,0 +1,59 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-16 mx-auto">
+            <div class="card-body">
+                <h1>
+                    <center>MIEMBROS ACTUALES</center>
+                </h1>
+                <table class="table responsive">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">nombres</th>
+                            <th scope="col">apellidos</th>
+                            <th scope="col">cedula</th>
+                            <th scope="col">telefono</th>
+                            <th scope="col">fecha de nacimiento</th>
+                            <th scope="col">fecha de bautismo</th>
+                            <th scope="col">nombre del pastor que lo bautizo</th>
+                            <th scope="col">¿sellado?</th>
+                            <th scope="col">#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each membresia}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{nombres}}</td>
+                            <td>{{apellidos}}</td>
+                            <td>{{cedula}}</td>
+                            <td>{{telefono}}</td>
+                            <td>{{fechaNacimiento}}</td>
+                            <td>{{fechaBautismo}}</td>
+                            <td>{{nombrePastor}}</td>
+                            <td>{{sellado}}</td>
+                            <td>
+                                <a href="/membresia/delete/{{id}}" class="btn btn-success btn-info btn-lg">Eliminar</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"> volver a opciones</h5>
+                            <a href="/opciones/opciones" class="btn btn-success btn-info btn-lg">Ir Aqui...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Registrar</h5>
+                            <a href="/membresia/add" class="btn btn-success btn-info btn-lg">Ir Aqui...</a>
+                        </div>
+                    </div>
+                </div>

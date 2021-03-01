@@ -1,0 +1,55 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-16 mx-auto">
+            <div class="card-body">
+                <h2 class="card-title"><center>DATOS DE LA IGLESIA</center></h2><br>
+                <table class="table responsive-md">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">entidad</th>
+                            <th scope="col">sede</th>
+                            <th scope="col">nit</th>
+                            <th scope="col">direccion</th>
+                            <th scope="col">ciudad</th>
+                            <th scope="col">celular</th>
+                            <th scope="col">e-mail</th>
+                            <th scope="col">#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each datos}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{entidad}}</td>
+                            <td>{{sede}}</td>
+                            <td>{{nit}}</td>
+                            <td>{{direccion}}</td>
+                            <td>{{ciudad}}</td>
+                            <td>{{celular}}</td>
+                            <td>{{email}}</td>
+                            <td>
+                                <a href="/datos/delete/{{id}}" class="btn btn-success btn-info btn-lg">Eliminar</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"> volver a opciones</h5>
+                            <a href="/opciones/opciones" class="btn btn-success btn-info btn-lg">Ir Aqui...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Registrar</h5>
+                            <a href="/datos/add" class="btn btn-success btn-info btn-lg">Ir Aqui...</a>
+                        </div>
+                    </div>
+                </div>
